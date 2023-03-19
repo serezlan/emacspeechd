@@ -1,0 +1,39 @@
+* Overview
+
+Emacspeak TTS server using speech dispatcher.
+
+* Features
+
+- allows to use any voices supported by speech dispatcher, e.g. vocalizer.
+
+  
+* Requirement
+
+- go 1.17+
+- speech dispatcher
+
+  
+* Building
+
+#+BEGIN_SRC bash
+    cd <your-emacspeak-directory>/servers
+  git clone https://github.com/serezlan/emacspeechd
+  cd emacspeechd
+  make && make install
+#+END_SRC
+
+* Usage
+
+#+begin_src emacs-lisp :tangle yes
+  ;; add these line somewhere in your init.el
+  (setenv "DTK_PROGRAM" "speechd")
+
+  ;; These lines will modify emacspeechd
+  ;; You can find the source in lisp directory
+  (dtk-set-voice "voxin" "zoe-embedded-high")
+
+  ;; Set volume
+  ;; Please note that speech dispatcher accept value range of -100 to 100 for volume and speech rate
+  (dtk-set-volume -20)
+#+end_src
+
