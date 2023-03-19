@@ -24,6 +24,7 @@ var SymbolReplacement = map[string]string{
 	"\"": "quote",
 	"(":  "left parent",
 	")":  "right parent",
+	"*":  "star",
 }
 
 // SpeakLetterSpeaks a letter.
