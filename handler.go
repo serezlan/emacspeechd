@@ -94,7 +94,7 @@ func SetPitch(s *Synthesizer, args []string) {
 // Say Says something.
 func Say(s *Synthesizer, args []string) {
 	s.Session.Cancel()
-	s.Session.Speak(args[0])
+	go s.Session.Speak(args[0])
 }
 
 // clipValue will cap any value outside range +- 100
