@@ -7,6 +7,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"unicode"
 
 	"github.com/faiface/beep"
 	"github.com/faiface/beep/speaker"
@@ -30,6 +31,12 @@ var SymbolReplacement = map[string]string{
 
 // SpeakLetterSpeaks a letter.
 func SpeakLetter(synt *Synthesizer, args []string) {
+	runeArray := []rune(args[0])
+
+	if unicode.IsUpper(runeArray[0]) {
+		synt.Session.Speak(fmt.Sprintf("Cap %s", args[0]))
+		return
+	}
 	synt.Session.Speak(args[0])
 }
 
