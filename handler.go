@@ -21,10 +21,11 @@ var SymbolReplacement = map[string]string{
 	"-":  "dash",
 	"?":  "question mark",
 	":":  "colon",
-	"_":  "line",
+	"_":  "underscore",
 	"\"": "quote",
 	"(":  "left parent",
 	")":  "right parent",
+	",":  "comma",
 	"*":  "star",
 	"!":  "exclaim",
 }
