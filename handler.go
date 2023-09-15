@@ -28,6 +28,7 @@ var SymbolReplacement = map[string]string{
 	",":  "comma",
 	"*":  "star",
 	"!":  "exclaim",
+	"&":  "and",
 }
 
 // SpeakLetterSpeaks a letter.
