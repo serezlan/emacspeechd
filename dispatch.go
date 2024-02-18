@@ -19,6 +19,7 @@ type Synthesizer struct {
 
 func OpenSpeechSession() (*Synthesizer, error) {
 	Session, err := speechd.Open()
+		
 
 	if err != nil {
 		log.Println(err)

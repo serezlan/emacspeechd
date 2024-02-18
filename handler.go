@@ -26,6 +26,8 @@ var SymbolReplacement = map[string]string{
 	"(":  "left parent",
 	")":  "right parent",
 	",":  "comma",
+	"'":  "apostopry",
+	"=":  "equal",
 	"*":  "star",
 	"!":  "exclaim",
 	"&":  "and",
