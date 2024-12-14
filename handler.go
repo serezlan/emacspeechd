@@ -142,7 +142,7 @@ func SetPunctuation(synt *Synthesizer, args []string) {
 // SetTtsSyncState Process tts_sink_state command.
 func SetTtsSyncState(s *Synthesizer, args []string) {
 	SetPunctuation(s, args)
-	SetRate(s, []string{args[2]})
+	SetRate(s, []string{args[3]})
 	// TODO: works on split caps
 }
 
